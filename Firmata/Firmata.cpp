@@ -153,7 +153,6 @@ void FirmataClass::processSysexMessage(void)
 {
   switch(storedInputData[0]) { //first byte in buffer is command
   case REPORT_FIRMWARE:
-	  Serial.println("<< Print firmware version");
     printFirmwareVersion();
     break;
   case STRING_DATA:
@@ -259,7 +258,6 @@ void FirmataClass::processInput(void)
       systemReset();
       break;
     case REPORT_VERSION:
-		  Serial.println("<< Print protocol version");
       printVersion();
       break;
     }
