@@ -83,7 +83,6 @@ void FirmataClass::begin(Stream &s)
 
 // output the protocol version message to the serial port
 void FirmataClass::printVersion(void) {
-  FirmataSerial.write("Sending protocol ...");
   FirmataSerial.write(REPORT_VERSION);
   FirmataSerial.write(FIRMATA_MAJOR_VERSION);
   FirmataSerial.write(FIRMATA_MINOR_VERSION);
